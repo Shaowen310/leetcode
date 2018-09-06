@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import question.A44Permutation;
+import question.A46Permutation;
 
-public class A44PermutationRecur implements A44Permutation {
+public class A46Recursion implements A46Permutation {
 	private List<List<Integer>> permuteRecur(List<Integer> interResult, List<Integer> nums) {
         List<List<Integer>> result = new ArrayList<>();
         if (nums.isEmpty()) {
@@ -30,7 +30,7 @@ public class A44PermutationRecur implements A44Permutation {
 	}
 
 	public static void main(String[] args) {
-		A44Permutation sol = new A44PermutationRecur();
+		A46Permutation sol = new A46Recursion();
 		int[] nums = { 1, 2, 3, 4 };
 		List<List<Integer>> result = sol.permute(nums);
 		System.out.println(result);
