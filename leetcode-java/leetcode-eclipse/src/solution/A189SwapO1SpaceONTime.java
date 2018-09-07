@@ -2,7 +2,7 @@ package solution;
 
 import question.A189RotateArray;
 
-public class A189O1SpaceON2Time implements A189RotateArray {
+public class A189SwapO1SpaceONTime implements A189RotateArray {
 
 	private void swap(int[] nums, int i, int j) {
 		int cache = nums[j];
@@ -13,11 +13,15 @@ public class A189O1SpaceON2Time implements A189RotateArray {
 	@Override
 	public void rotate(int[] nums, int k) {
 		int end = nums.length;
-		while (end != 0 && k != end) {
-			int c = 0;
+		while (end != 0) {
+			k %= end;
+			if (k == 0) {
+				return;
+			}
+			int c = k;
 			rotateIter: while (true) {
-				int i = 0;
-				while (i < k) {
+				int i;
+				for (i = 0; i < k; i++) {
 					int dest = i + c;
 					if (dest >= end) {
 						// update subarray rotate
@@ -27,7 +31,6 @@ public class A189O1SpaceON2Time implements A189RotateArray {
 					} else {
 						swap(nums, i, dest);
 					}
-					i++;
 				}
 				c += i;
 			}
