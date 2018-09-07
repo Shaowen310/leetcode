@@ -5,10 +5,10 @@ import static org.junit.Assert.assertArrayEquals;
 import org.junit.jupiter.api.Test;
 
 import question.A189RotateArray;
-import solution.A189SwapO1SpaceONTime;
+import solution.A189ReverseO1SpaceO2NTime;
 
 public class A189Test {
-	private A189RotateArray sol = new A189SwapO1SpaceONTime();
+	private A189RotateArray sol = new A189ReverseO1SpaceO2NTime();
 
 	@Test
 	public void test() {
