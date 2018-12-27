@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "leetcode-eclipse",
+                "projectName": "leetcode-eclipse",
+                "workingDirectory": "f:\\Codes\\leetcode\\leetcode-java\\leetcode-eclipse",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "leetcode-eclipse",
+                "projectName": "leetcode-eclipse",
+                "workingDirectory": "f:\\Codes\\leetcode\\leetcode-java\\leetcode-eclipse",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}

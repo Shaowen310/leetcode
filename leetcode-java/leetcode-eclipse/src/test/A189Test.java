@@ -2,7 +2,7 @@ package test;
 
 import static org.junit.Assert.assertArrayEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import question.A189RotateArray;
 import solution.A189ReverseO1SpaceO2NTime;
