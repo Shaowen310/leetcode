@@ -10,6 +10,8 @@ Divide the problem to two sub problems of same nature as original problem.
 
 ### Permutation
 
+### BFS and DFS (backed by Queue and Stack)
+
 ### Bit Manipulation
 
 [136. Single Number](https://leetcode.com/problems/single-number/description/)
@@ -28,3 +30,19 @@ Array that contains only positive numbers and find summation of consecutive suba
 
 ### Linked List
 [143. Reorder List](https://leetcode.com/problems/reorder-list/description/)
+
+### Queue
+
+Used by BFS algorithm.
+
+#### Circular Queue
+
+[622. Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
+
+## Advanced Data Structures
+
+### Disjoint-set [wiki](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
+
+Graph connectivity check. Crucial for minimum spanning tree algorithm.
+
+[200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
