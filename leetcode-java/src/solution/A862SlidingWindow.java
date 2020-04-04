@@ -15,7 +15,7 @@ import question.A862ShortestSubarrayWithSumAtLeastK;
 public class A862SlidingWindow implements A862ShortestSubarrayWithSumAtLeastK {
 
 	@Override
-	public int shortestSubarray(int[] A, int K) {
+	public int shortestSubarray(final int[] A, final int K) {
 		int left = 0;
 		int right = 1;
 		int sum = 0;
@@ -36,16 +36,16 @@ public class A862SlidingWindow implements A862ShortestSubarrayWithSumAtLeastK {
 		return found ? arrLen : -1;
 	}
 
-	public static void main(String[] args) {
-		A862SlidingWindow sol = new A862SlidingWindow();
-		int[] A = { 2, -1, 2 };
-		int K = 3;
+	public static void main(final String[] args) {
+		final A862SlidingWindow sol = new A862SlidingWindow();
+		final int[] A = { 2, -1, 2 };
+		final int K = 3;
 		System.out.println("a - " + Arrays.toString(A));
 		System.out.println("k = " + K);
 		System.out.println(sol.shortestSubarray(A, K));
 
-		int[] A1 = { 84, -37, 32, 40, 95 };
-		int K1 = 167;
+		final int[] A1 = { 84, -37, 32, 40, 95 };
+		final int K1 = 167;
 		System.out.println("a - " + Arrays.toString(A1));
 		System.out.println("k = " + K1);
 		System.out.println(sol.shortestSubarray(A1, K1));

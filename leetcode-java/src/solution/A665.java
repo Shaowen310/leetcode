@@ -12,7 +12,7 @@ import question.A665NonDecreasingArray;
 public class A665 implements A665NonDecreasingArray {
 
 	@Override
-	public boolean checkPossibility(int[] nums) {
+	public boolean checkPossibility(final int[] nums) {
 		boolean foundNd = false;
 		for (int i = 1; i < nums.length; i++) {
 			if (nums[i] < nums[i - 1]) {

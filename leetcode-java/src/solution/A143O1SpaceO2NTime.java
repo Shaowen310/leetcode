@@ -24,7 +24,7 @@ public class A143O1SpaceO2NTime implements A143ReorderList {
 		pSlow.next = null;
 		// Tail reverse
 		while (pTailIter != null) {
-			ListNode iterNext = pTailIter.next;
+			final ListNode iterNext = pTailIter.next;
 			pTailIter.next = pTailHead;
 			pTailHead = pTailIter;
 			pTailIter = iterNext;
@@ -32,7 +32,7 @@ public class A143O1SpaceO2NTime implements A143ReorderList {
 
 		// Assembly
 		while (head != null && pTailHead != null) {
-			ListNode headNext = head.next;
+			final ListNode headNext = head.next;
 			head.next = pTailHead;
 			pTailHead = pTailHead.next;
 			head = head.next;

@@ -4,7 +4,7 @@ import question.A153FindMinimumInRotatedSortedArray;
 
 public class A153 implements A153FindMinimumInRotatedSortedArray {
 
-	private int findMinRecur(int[] nums, int s, int e) {
+	private int findMinRecur(final int[] nums, final int s, final int e) {
 		/**
 		 * s index start; e index end; m index middle floor((s+e)/2)
 		 */
@@ -13,12 +13,12 @@ public class A153 implements A153FindMinimumInRotatedSortedArray {
 			return nums[s];
 		}
 		// else: s != e && nums[s] > nums[e]
-		int m = (s + e) / 2;
+		final int m = (s + e) / 2;
 		return Math.min(findMinRecur(nums, s, m), findMinRecur(nums, m + 1, e));
 	}
 
 	@Override
-	public int findMin(int[] nums) {
+	public int findMin(final int[] nums) {
 		if (nums.length == 0) {
 			throw new IllegalArgumentException("nums should contain at least one number.");
 		}

@@ -4,14 +4,14 @@ import question.A189RotateArray;
 
 public class A189SwapO1SpaceONTime implements A189RotateArray {
 
-	private void swap(int[] nums, int i, int j) {
-		int cache = nums[j];
+	private void swap(final int[] nums, final int i, final int j) {
+		final int cache = nums[j];
 		nums[j] = nums[i];
 		nums[i] = cache;
 	}
 
 	@Override
-	public void rotate(int[] nums, int k) {
+	public void rotate(final int[] nums, int k) {
 		int end = nums.length;
 		while (end != 0) {
 			k %= end;
@@ -22,7 +22,7 @@ public class A189SwapO1SpaceONTime implements A189RotateArray {
 			rotateIter: while (true) {
 				int i;
 				for (i = 0; i < k; i++) {
-					int dest = i + c;
+					final int dest = i + c;
 					if (dest >= end) {
 						// update subarray rotate
 						end = k;

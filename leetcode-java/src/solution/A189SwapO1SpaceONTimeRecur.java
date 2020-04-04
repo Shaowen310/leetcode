@@ -4,13 +4,13 @@ import question.A189RotateArray;
 
 public class A189SwapO1SpaceONTimeRecur implements A189RotateArray {
 
-	private void swap(int[] nums, int i, int j) {
-		int cache = nums[j];
+	private void swap(final int[] nums, final int i, final int j) {
+		final int cache = nums[j];
 		nums[j] = nums[i];
 		nums[i] = cache;
 	}
 
-	private void rotateRecur(int[] nums, int k, int end) {
+	private void rotateRecur(final int[] nums, int k, int end) {
 		if (end == 0) {
 			return;
 		}
@@ -22,7 +22,7 @@ public class A189SwapO1SpaceONTimeRecur implements A189RotateArray {
 		while (true) {
 			int i;
 			for (i = 0; i < k; i++) {
-				int dest = i + c;
+				final int dest = i + c;
 				if (dest >= end) {
 					// update subarray rotate
 					end = k;
@@ -38,7 +38,7 @@ public class A189SwapO1SpaceONTimeRecur implements A189RotateArray {
 	}
 
 	@Override
-	public void rotate(int[] nums, int k) {
+	public void rotate(final int[] nums, final int k) {
 		rotateRecur(nums, k, nums.length);
 	}
 

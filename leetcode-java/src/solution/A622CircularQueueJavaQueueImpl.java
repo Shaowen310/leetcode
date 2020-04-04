@@ -8,7 +8,7 @@ import question.A622DesignCircularQueueJavaQueue;
 
 public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueueJavaQueue<T> {
 
-	private Object a[];
+	private final Object a[];
 	private int s;
 	private int e;
 	private int size;
@@ -17,7 +17,7 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 	 * Initialize your data structure here. Set the size of the queue to be
 	 * capacity.
 	 */
-	public A622CircularQueueJavaQueueImpl(int capacity) {
+	public A622CircularQueueJavaQueueImpl(final int capacity) {
 		a = new Object[capacity];
 		s = 0;
 		e = 0;
@@ -25,7 +25,7 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 	}
 
 	@Override
-	public boolean add(T arg0) {
+	public boolean add(final T arg0) {
 		if (size() >= a.length) {
 			throw new IllegalStateException();
 		}
@@ -43,7 +43,7 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 	}
 
 	@Override
-	public boolean offer(T arg0) {
+	public boolean offer(final T arg0) {
 		if (size() >= a.length) {
 			return false;
 		}
@@ -52,7 +52,7 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 		return true;
 	}
 
-	private void offerInternal(T arg0) {
+	private void offerInternal(final T arg0) {
 		// assert (size() < a.length)
 		a[e++] = arg0;
 		e %= a.length;
@@ -86,7 +86,7 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 	private T pollInternal() {
 		// assert (!isEmpty())
 		@SuppressWarnings("unchecked")
-		T val = (T) a[s++];
+		final T val = (T) a[s++];
 		s %= a.length;
 		size--;
 		return val;
@@ -102,7 +102,7 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 	}
 
 	@Override
-	public boolean addAll(Collection<? extends T> arg0) {
+	public boolean addAll(final Collection<? extends T> arg0) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -114,12 +114,12 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 	}
 
 	@Override
-	public boolean contains(Object arg0) {
+	public boolean contains(final Object arg0) {
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
-	public boolean containsAll(Collection<?> arg0) {
+	public boolean containsAll(final Collection<?> arg0) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -134,17 +134,17 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 	}
 
 	@Override
-	public boolean remove(Object arg0) {
+	public boolean remove(final Object arg0) {
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
-	public boolean removeAll(Collection<?> arg0) {
+	public boolean removeAll(final Collection<?> arg0) {
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
-	public boolean retainAll(Collection<?> arg0) {
+	public boolean retainAll(final Collection<?> arg0) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -160,7 +160,7 @@ public class A622CircularQueueJavaQueueImpl<T> implements A622DesignCircularQueu
 
 	@SuppressWarnings("hiding")
 	@Override
-	public <T> T[] toArray(T[] arg0) {
+	public <T> T[] toArray(final T[] arg0) {
 		throw new UnsupportedOperationException();
 	}
 

@@ -4,20 +4,20 @@ import question.A189RotateArray;
 
 public class A189ReverseO1SpaceO2NTime implements A189RotateArray {
 
-	private void swap(int[] nums, int i, int j) {
-		int cache = nums[j];
+	private void swap(final int[] nums, final int i, final int j) {
+		final int cache = nums[j];
 		nums[j] = nums[i];
 		nums[i] = cache;
 	}
 
-	private void reverse(int[] nums, int start, int end) {
+	private void reverse(final int[] nums, final int start, final int end) {
 		for (int i = start, j = end - 1; i < j; i++, j--) {
 			swap(nums, i, j);
 		}
 	}
 
 	@Override
-	public void rotate(int[] nums, int k) {
+	public void rotate(final int[] nums, int k) {
 		if (nums.length == 0) {
 			return;
 		}

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Optional;
 
-public class SinglyLinkedListInt extends AbstractSequentialList<Integer> implements List<Integer>, Serializable {
+public class SinglyLinkedListInt extends AbstractSequentialList<Integer> implements Serializable {
 
 	private static final long serialVersionUID = 9147047983716440546L;
 
